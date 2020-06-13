@@ -1,7 +1,6 @@
-const mongoose = require("mongoose");
-const slugify = require("slugify");
-
-const loginSchema = new mongoose.Schema({
+const db1 = require("../dbConnections/db1");
+const Schema = db1.Schema;
+const loginSchema = new Schema({
   name: {
     type: String,
     required: [true, "usrname can't be balnk"],
@@ -19,6 +18,6 @@ const loginSchema = new mongoose.Schema({
   }
 });
 
-const Login = mongoose.model("Login", loginSchema);
+const Login = db1.model("Logins", loginSchema);
 
 module.exports = Login;
