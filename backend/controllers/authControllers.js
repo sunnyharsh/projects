@@ -4,5 +4,5 @@ const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 
 exports.getLogin = catchAsync(async (req, res) => {
-  console.log("call login");
+  console.log(req.body);
 });
